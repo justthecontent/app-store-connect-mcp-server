@@ -1,13 +1,46 @@
 {
-  "name": "appstore-connect-mcp-server",
+  "name": "@justthecontent/appstore-connect-mcp-server",
   "version": "1.1.1",
+  "description": "A Model Context Protocol (MCP) server for interacting with the App Store Connect API",
   "type": "module",
+  "main": "./dist/src/index.js",
   "scripts": {
     "build": "tsc && shx chmod +x dist/src/*.js",
-    "start": "node dist/src/index.js"
+    "start": "node dist/src/index.js",
+    "prepublishOnly": "npm run build"
   },
   "bin": {
     "appstore-connect-mcp": "./dist/src/index.js"
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "app-store-connect",
+    "apple",
+    "ios",
+    "macos",
+    "api",
+    "testflight",
+    "beta-testing",
+    "app-analytics"
+  ],
+  "author": "Krishna Yekkala",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justthecontent/app-store-connect-mcp-server.git"
+  },
+  "homepage": "https://github.com/justthecontent/app-store-connect-mcp-server#readme",
+  "bugs": {
+    "url": "https://github.com/justthecontent/app-store-connect-mcp-server/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.15.1",

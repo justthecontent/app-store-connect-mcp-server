@@ -77,13 +77,19 @@ This server transforms complex App Store Connect operations into simple conversa
 To install App Store Connect Server for Claude Desktop automatically:
 
 ```bash
-npx @smithery/cli install appstore-connect-mcp-server --client claude
+npx @smithery/cli install @justthecontent/appstore-connect-mcp-server --client claude
 ```
 
 ### Manual Installation
 
 ```bash
-npm install @joshuarileydev/app-store-connect-mcp-server
+npm install -g @justthecontent/appstore-connect-mcp-server
+```
+
+### Quick Start with npx
+
+```bash
+npx -y @justthecontent/appstore-connect-mcp-server
 ```
 
 ## Configuration
@@ -107,7 +113,7 @@ Add the following to your Claude Desktop configuration file:
       "command": "npx",
       "args": [
         "-y",
-        "@joshuarileydev/app-store-connect-mcp-server"
+        "@justthecontent/appstore-connect-mcp-server"
       ],
       "env": {
         "APP_STORE_CONNECT_KEY_ID": "YOUR_KEY_ID",
